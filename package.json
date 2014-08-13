@@ -1,0 +1,23 @@
+{
+	"dependencies": {
+		"gulp": "*",
+		"gulp-clean": "*",
+		"gulp.spritesmith": "*",
+		"gulp-task-listing": "*"
+	},
+	"scripts": {
+		"postinstall": "bash ./deploy.sh"
+	},
+
+	"gulp": {
+		"clean": [ "./bitrix/templates/general/styles/src/sprites/" ],
+		"sprites": {
+			"icons": {
+				"css_dir": "./bitrix/templates/general/styles/src/sprites/",
+				"img_dir": "./bitrix/templates/general/images/sprites/icons/",
+				"img_path_prefix": "/bitrix/templates/general/images/sprites/icons/",
+				"algorithm": "binary-tree"
+			}
+		}
+	}
+}

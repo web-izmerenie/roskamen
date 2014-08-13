@@ -1,0 +1,64 @@
+/**
+ * Main less module
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+// imports {{{1
+
+// variables
+@import "variables";
+
+// libs
+@import "libs/reset";
+@import "libs/lesshat";
+@import "libs/font_mixins";
+@import "libs/position_mixins";
+@import "libs/animated_icon_mixin";
+@import "libs/pseudo_mixins";
+
+// project mixins
+@import "mixins";
+
+// fonts
+@import "fonts";
+
+// sprites
+@import "sprites/icons";
+
+// mixins
+// ...
+
+// elements
+// ...
+
+// pages
+// ...
+
+// imports }}}1
+
+html, body {
+	.size(100%, auto);
+	min-height: 100%;
+}
+
+:focus { outline: none; }
+::-moz-focus-inner { border: 0; }
+
+html body {
+	overflow-y: scroll;
+
+	background: @bgColor;
+	color: @contentColor;
+
+	font: @contentFont;
+	//.fontMetrics(0, 0);
+
+	h1 { // {{{1
+		display: block;
+	} // h1 }}}1
+
+	main { // {{{1
+		display: block;
+	} // main }}}1
+} // html body

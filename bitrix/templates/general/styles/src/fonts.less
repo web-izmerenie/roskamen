@@ -1,0 +1,28 @@
+/**
+ * Font-faces
+ *
+ * @required variables.less
+ * @required font_mixins.less
+ * @author Viacheslav Lotsmanov
+ */
+
+// overwrite lesshat mixin for path and revision and custom svg id
+.font-face(@fontname, @fontfile, @fontweight:normal, @fontstyle:normal) {
+	font-family: "@{fontname}";
+	src: url("@{fontsPrefix}@{fontfile}.eot?v=@{revision}");
+	src: url("@{fontsPrefix}@{fontfile}.eot?v=@{revision}#iefix") format("embedded-opentype"),
+		url("@{fontsPrefix}@{fontfile}.woff?v=@{revision}") format("woff"),
+		url("@{fontsPrefix}@{fontfile}.ttf?v=@{revision}") format("truetype"),
+		url("@{fontsPrefix}@{fontfile}.svg?v=@{revision}#@{fontfile}") format("svg");
+	font-weight: @fontweight;
+	font-style: @fontstyle;
+}
+
+@font-face { .font-face('Cuprum', 'Cuprum-Regular'); }
+@font-face { .font-face('Cuprum', 'Cuprum-Bold', bold); }
+@font-face { .font-face('Cuprum', 'Cuprum-Italic', normal, italic); }
+@font-face { .font-face('Cuprum', 'Cuprum-BoldItalic', bold, italic); }
+
+.sansSerifFont(@fontName) { font-family: @fontName, 'Liberation Sans', Helvetica, Arial, sans-serif; };
+.sansSerifFont(@fontName, @fs) { .sansSerifFont(@fontName); .fontMetrics(@fs); };
+.sansSerifFont(@fontName, @fs, @lh) { .sansSerifFont(@fontName); .fontMetrics(@fs, @lh); };

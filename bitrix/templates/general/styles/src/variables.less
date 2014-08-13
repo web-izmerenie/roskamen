@@ -1,0 +1,63 @@
+/**
+ * Variables module
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+// paths
+@tplPath: '/bitrix/templates/general/';
+@imgPrefix: '@{tplPath}images/';
+@fontsPrefix: '@{tplPath}fonts/';
+
+// revision for images and fonts
+@revision: 1;
+
+// sizes {{{1
+
+	@mainMargin: 38px;
+
+	@minWidth: 980px;
+	@maxWidth: 1138px + (@mainMargin * 2);
+
+// sizes }}}1
+
+// fonts {{{1
+
+	@contentFontSize: 17px;
+	@contentFontLine: 24px;
+	@contentFontFamily: Cuprum, 'Liberation Sans', Helvetica, Arial, sans-serif;
+	@contentFont: ~'@{contentFontSize}/@{contentFontLine}' @contentFontFamily;
+
+// fonts }}}1
+
+// colors {{{1
+
+	@bgColor: #fff;
+	@contentColor: #1c1919;
+
+	// link
+	@linkColor: #53a0b1;
+	@linkColorUnderline: #53a0b1;
+	@activeLinkColor: #ee7e7b;
+	@activeLinkColorUnderline: #ee7e7b;
+
+	@firstColor: @linkColor;
+	@secondColor: @activeLinkColor;
+	@lightColor: #6d6d6d;
+
+	@yellowColor: #ece8aa;
+	@greenColor: #63e399;
+	@blueColor: #b6dfea;
+
+	@footerCopyrightColor: #797373;
+
+	@plugColor: #eaeaea;
+
+// colors }}}1
+
+// animations {{{1
+
+	@animationSpeed: 0.2s;
+	@animationCurve: ease-in-out;
+
+// animations }}}1
