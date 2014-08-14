@@ -33,10 +33,13 @@
 	<?if($debug):?><script>var less = { env: 'development' };</script><?endif?>
 
 	<link rel="stylesheet/less" type="text/css" href="<?=$tplPath?>/styles/src/main.less?v=<?=$revision?>">
-	<?/*<link rel="stylesheet" href="<?=$tplPath?>/styles/build/build.css?v=<?=$revision?>">*/?>
+	<!--<link rel="stylesheet" href="<?=$tplPath?>/styles/build/build.css?v=<?=$revision?>">-->
 	<script src="<?=$tplPath?>/scripts/src/libs/require.js?v=<?=$revision?>"></script>
-	<?$APPLICATION->ShowCSS()?>
-	<?$APPLICATION->ShowHeadStrings()?>
+
+	<?if($USER->IsAuthorized()):?>
+		<?$APPLICATION->ShowHead()?>
+	<?endif?>
+
 	<script>
 		require.config({
 			baseUrl: '<?=$tplPath?>/scripts/src/',
