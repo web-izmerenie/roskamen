@@ -1,0 +1,57 @@
+/**
+ * <header> styles
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+html body header {
+	display: block;
+	.size(100%, @headerHeightMin);
+	min-width: @minWidth;
+	.fixed(0, auto, auto, 0);
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.9);
+
+	.site-name { // {{{1
+		display: inline-block;
+		margin-top: 57px - 22px;
+		margin-left: @mainMargin;
+		.sansSerifFont('Cuprum', 26px);
+		font-weight: bold;
+		text-transform: uppercase;
+		vertical-align: top;
+
+		a { .linkNoLine; }
+		&, a, a:hover { color: @contentColor; }
+	} // .site_name }}}1
+
+	.phone { // {{{1
+		display: inline-block;
+		.sansSerifFont('Cuprum', 18px);
+		.linkNoLine;
+		vertical-align: top;
+		.relative(55px - 16px);
+		margin-left: @mainMargin;
+
+		&, &:hover { color: @lightColor; }
+	} // .site-name + .phone }}}1
+
+	.site-name + .phone { margin-left: 30px; }
+
+	nav.top_menu { // {{{1
+		display: block;
+		.absolute(55px - 16px, 0);
+
+		&>a { .linkNoLine; }
+
+		&>a, &>span {
+			display: inline-block;
+			text-transform: uppercase;
+			color: @contentColor;
+			margin-right: @mainMargin;
+			.sansSerifFont('Cuprum', 18px);
+		}
+
+		&>span { cursor: default; }
+	} // nav.top_menu }}}1
+} // html body header

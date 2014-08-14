@@ -30,7 +30,8 @@
 // ...
 
 // elements
-// ...
+@import "header";
+@import "footer";
 
 // pages
 @import "pages/main";
@@ -38,8 +39,7 @@
 // imports }}}1
 
 html, body {
-	.size(100%, auto);
-	min-height: 100%;
+	.size(100%);
 }
 
 :focus { outline: none; }
@@ -56,7 +56,20 @@ html body {
 
 	h1 { // {{{1
 		display: block;
+		.sansSerifFont('Cuprum', 50px);
+		text-transform: uppercase;
 	} // h1 }}}1
+
+	.top-part {
+		display: block;
+		min-height: 100%;
+		padding-top: @headerHeightMin;
+		padding-bottom: @footerHeight;
+		margin-bottom: -(@footerHeight);
+		.box-sizing(border-box);
+
+		&:after { .pseudoBlock; }
+	} // .top-part
 
 	main { // {{{1
 		display: block;

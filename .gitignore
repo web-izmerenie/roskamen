@@ -26,6 +26,8 @@ robots.txt
 
 index.html
 
+test.php
+
 # bitrix tmp dirs
 bitrix/cache
 bitrix/managed_cache

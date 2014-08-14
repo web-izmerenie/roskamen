@@ -1,0 +1,48 @@
+/**
+ * <footer> styles
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+html body footer {
+	display: block;
+	.size(100%, @footerHeight);
+	.relative;
+
+	.developer { // {{{1
+		display: block;
+		.absolute(auto, @mainMargin, (29px - 3px));
+
+		span:first-child {
+			.sansSerifFont('Cuprum', 13px);
+			text-transform: uppercase;
+			color: @footerCopyrightColor;
+		}
+
+		span:first-child + span {
+			.sprite-width(@sprite_icons_wi_logo);
+			.sprite-height(@sprite_icons_wi_logo);
+			display: inline-block;
+
+			&:before { .sprite(@sprite_icons_wi_logo); }
+			&:after { .sprite(@sprite_icons_wi_logo_active); }
+
+			.animatedIcon;
+			.relative(-1px);
+			margin-left: 4px;
+		}
+
+		span { vertical-align: top; }
+
+		a {
+			.linkNoLine;
+
+			&:hover span:first-child + span {
+				&:before { .opacity(0); }
+				&:after { .opacity(1); }
+			}
+
+			&>span, &:hover>span { color: @footerCopyrightColor; }
+		}
+	} // .developer }}}1
+} // html body footer

@@ -12,7 +12,7 @@ define(function () {
 
 		animationSpeed: 200, // ms
 		animationCurve: 'easeInOutQuad', // easing
-		footerHeight: 74, // px
+		footerHeight: 100, // px
 		waiterTimeout: 200, // ms
 
 	};

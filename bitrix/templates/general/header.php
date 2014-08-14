@@ -54,6 +54,9 @@
 	<!--[if IE 8]>
 		<script>document.getElementsByTagName('html')[0].className += ' ie8';</script>
 	<![endif]-->
+	<!--[if IE 9]>
+		<script>document.getElementsByTagName('html')[0].className += ' ie9';</script>
+	<![endif]-->
 
 	<!-- Pulled from http://code.google.com/p/html5shiv/ -->
 	<!--[if lt IE 9]>
@@ -77,12 +80,16 @@
 
 <body>
 	<div id="bitrix-panel"><?$APPLICATION->ShowPanel()?></div>
-	<div class="top_part">
+	<div class="top-part">
 		<header>
-			<div class="site_name">
+			<div class="site-name">
+				<?if(!defined('MAIN_PAGE')):?>
 				<a href="/" title="<?=$MESS['GOTO_MAIN_PAGE']?>">
+				<?endif?>
 					<?=$arSite['SITE_NAME']?>
+				<?if(!defined('MAIN_PAGE')):?>
 				</a>
+				<?endif?>
 			</div>
 			<a href="tel:+79034892159" class="phone">+7 903 489-21-59</a>
 			<nav class="top_menu">
@@ -108,48 +115,3 @@
 			<h1><?$APPLICATION->ShowTitle()?></h1>
 		<?endif?>
 		<main>
-			<section class="contacts">
-				<div class="imap" id="imap1"></div>
-				<div class="two_columns">
-					<div class="col">
-						<dl>
-							<dt><h3>По вопросам стоимости и заказа:</h3></dt>
-							<dd>
-								<a href="tel:+79034892159" class="phone">+7 903 489-21-59</a>
-								<a href="tel:+79613314048" class="phone">+7 961 331-40-48</a>
-								<span class="office_hours">Круглосуточно</span>
-							</dd>
-						</dl>
-						<dl>
-							<dt><h3>По другим вопросам:</h3></dt>
-							<dd>
-								<a href="tel:+7" class="phone">+7 </a>
-								<a href="tel:+7" class="phone">+7 </a>
-								<span class="office_hours">ПН—ПТ с 9:00 до 18:00</span>
-							</dd>
-						</dl>
-						<a href="mailto:roskamen2014@mail.ru">roskamen2014@mail.ru</a>
-					</div>
-					<div class="col">
-						<dl>
-							<dt><h3>Наш офис:</h3></dt>
-							<dd>
-								<address>
-									г. Ростов-на-Дону, пр. Стачки, 25<br>
-									<a href="#imap1" class="on_map">на карте</a>
-								</address>
-							</dd>
-						</dl>
-					</div>
-				</div>
-			</section>
-		</main>
-	</div>
-	<footer>
-		<div class="developer">
-			<a href="http://web-izmerenie.ru" title="Web izmerenie" target="_blank">
-				<span><?=$MESS['MADE_IN']?></span>
-				<span>Web izmerenie</span>
-			</a>
-		</div>
-	</footer>
