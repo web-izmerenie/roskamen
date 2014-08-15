@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Host: russian-stone.ru # TODO fix to real domain
