@@ -58,26 +58,27 @@ stylesReady(function () {
 	function applySlide($target) { // {{{1
 		$slide.css('border-color', $target.attr('data-color'));
 		$text.animate(
-			{ opacity: 0 },
+			{ 'opacity': '0' },
 			getVal('animationSpeed'),
 			getVal('animationCurve'),
 			function () {
 				$tInside.html( $target.find('h3').html() );
 				$text.animate(
-					{ opacity: 1 },
+					{ 'opacity': '1' },
 					getVal('animationSpeed') * 4,
 					getVal('animationCurve')
 				);
 			}
 		);
 		$bg.animate(
-			{ opacity: 0 },
+			{ 'margin-top': '100%' },
 			getVal('animationSpeed'),
 			getVal('animationCurve'),
 			function () {
+				$bg.css('margin-top', '-100%');
 				$bg.html('<img alt="" src="'+ $target.find('img').attr('src') +'">');
 				$bg.animate(
-					{ opacity: 1 },
+					{ 'margin-top': '0' },
 					getVal('animationSpeed') * 4,
 					getVal('animationCurve'),
 					function () {
@@ -94,7 +95,7 @@ stylesReady(function () {
 
 	$next.on('click', slideGo);
 
-	$w.on('resize' + bindSuffix, function () {
+	$w.on('resize' + bindSuffix, function () { // {{{1
 		// reset
 		$slide.css({
 			'margin-top': '',
@@ -148,7 +149,7 @@ stylesReady(function () {
 			var t = ($w.height() - fullH) / 2;
 			$slide.css('margin-top', (t) + 'px');
 		}
-	}).trigger('resize' + bindSuffix);
+	}).trigger('resize' + bindSuffix); // }}}1
 
 }); // stylesReady()
 }); // domReady()
