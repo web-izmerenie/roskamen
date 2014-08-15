@@ -53,9 +53,19 @@ html body header {
 			color: @contentColor;
 			margin-right: @mainMargin;
 			.sansSerifFont('Cuprum', 18px);
+			.relative;
 		}
 
 		&>span { cursor: default; }
+
+		&>span:before, &>a.active:before {
+			.pseudoBlock;
+			.size(100%, 10px);
+			.absolute(-(55px - 16px), auto, auto, 0);
+			background: #e6e5e5;
+			.fontMetrics(0, 0);
+			z-index: 10;
+		}
 	} // nav.top_menu }}}1
 
 	.schema-data { display: none; }
