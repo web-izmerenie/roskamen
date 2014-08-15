@@ -14,6 +14,7 @@ define(function () {
 		animationCurve: 'easeInOutQuad', // easing
 		footerHeight: 100, // px
 		waiterTimeout: 200, // ms
+		dynamicApiLoadInterval: 300, // ms
 
 		kontaktyMapRatio: [980, 450], // ratio a:b
 
