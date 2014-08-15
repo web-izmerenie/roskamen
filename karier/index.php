@@ -29,7 +29,7 @@ $APPLICATION->SetTitle("Карьер");
 
 	<div class="info_block">
 		<figure>
-			<img alt="" src="/upload/karier/picture.jpg" />
+			<img alt="" src="/upload/karier/picture.jpg">
 			<figcaption>
 				На&nbsp;нашем карьере мы&nbsp;используем только специализированную карьерную технику<br>
 				от&nbsp;лучших производителей Komatsu и&nbsp;Volvo
@@ -40,17 +40,35 @@ $APPLICATION->SetTitle("Карьер");
 	<h2>С нами работать выгодно</h2>
 
 	<ul class="advantages">
-		<li>Карьер расположен на 68 км от Ростова-на-Дону</li>
-		<li>Отгрузка щебня — 24 часа 7 дней в неделю</li>
-		<li>Лещадность 8–10%</li>
-		<li>Парк разногрузной техники и возможность самовывоза</li>
-		<li>Отгрузим точно от 10 до 100 тонн продукции</li>
-		<li>Гибкая система скидок и доступные цены</li>
+		<li>
+			<img alt="" src="/upload/karier/circles/way.png">
+			<p>Карьер расположен на 68 км<br>от Ростова-на-Дону</p>
+		</li>
+		<li>
+			<img alt="" src="/upload/karier/circles/time.png">
+			<p>Отгрузка щебня — 24 часа 7 дней<br> в неделю</p>
+		</li>
+		<li>
+			<img alt="" src="/upload/karier/circles/pyramid.png">
+			<p>Лещадность 8–10%</p>
+		</li>
+		<li>
+			<img alt="" src="/upload/karier/circles/car.png">
+			<p>Парк разногрузной техники<br>и возможность самовывоза</p>
+		</li>
+		<li>
+			<img alt="" src="/upload/karier/circles/weight.png">
+			<p>Отгрузим точно<br>от 10 до 100 тонн продукции</p>
+		</li>
+		<li>
+			<img alt="" src="/upload/karier/circles/percent.png">
+			<p>Гибкая система скидок<br>и доступные цены</p>
+		</li>
 	</ul>
 
 	<div class="info_block specific">
 		<figure>
-			<img alt="" src="/upload/karier/stones.jpg" />
+			<img alt="" src="/upload/karier/stones.jpg">
 			<figcaption>
 				<p>Высокое качество нашей продукции подтверждается <a href="#">сертификатами</a> и&nbsp;<a href="#">паспортами</a>.</p>
 				<p>Щебень, выработанный в&nbsp;нашем карьере, был допущен в&nbsp;составе основных поставок строительных материалов при возведении военного аэродрома в&nbsp;Крымске.</p>

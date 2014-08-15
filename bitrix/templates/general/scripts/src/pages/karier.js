@@ -23,9 +23,12 @@ stylesReady(function () {
 	$s.each(function (i1) {
 		var $s = $(this);
 		var $bq = $s.find('blockquote');
+		var $circles = $s.find('ul.advantages');
 
 		// resize {{{1
 		$w.on('resize' + resizeBindSuffix, function () {
+			$circles.removeClass('three_cols');
+
 			function r(min, max) {
 				return relativeNumber({
 					relVal: $f.width(),
@@ -35,14 +38,17 @@ stylesReady(function () {
 					max: max,
 				});
 			}
+
 			$bq.css({
 				'padding-top': r(bqTR[0], bqTR[1]),
 				'padding-bottom': r(bqBR[0], bqBR[1]),
 			});
+
+			if ($f.width() >= rMax) $circles.addClass('three_cols');
 		}).trigger('resize' + resizeBindSuffix);
 		// resize }}}1
 
-		$s.find('.video_block').each(function () {
+		$s.find('.video_block').each(function () { // {{{1
 			var $vb = $(this);
 			var $video = $vb.find('video');
 			$vb.find('.play').on('click', function () {
@@ -59,7 +65,7 @@ stylesReady(function () {
 				)
 				return false;
 			});
-		});
+		}); // .video_block }}}1
 	}); // $s.each
 }); // stylesReady()
 }); // domReady()
