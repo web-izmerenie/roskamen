@@ -16,6 +16,10 @@ define(function () {
 		waiterTimeout: 200, // ms
 		dynamicApiLoadInterval: 300, // ms
 
+		headerHeightRange: [96, 103], // [px, px]
+		headerSiteNameFSRange: [26, 35], // [px, px]
+		headerFSRange: [18, 24],
+
 		kontaktyMapRatio: [980, 450], // ratio a:b
 
 	};
