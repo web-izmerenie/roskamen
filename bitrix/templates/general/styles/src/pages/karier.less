@@ -1,0 +1,67 @@
+/**
+ * "karier" page styles
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+html body main section.pit {
+	display: block;
+	min-width: @minWidth;
+	max-width: @maxWidth;
+	margin: 0 auto;
+
+	blockquote.yellow {
+		.sansSerifFont('Cuprum', 20px, 24px);
+		border-top: 5px solid @yellowColor;
+		border-bottom: 5px solid @yellowColor;
+		text-align: center;
+		.box-sizing(border-box);
+		padding: 0 @mainMargin;
+		padding-top: 80px - 18px;
+		padding-bottom: 70px - 6px;
+	}
+
+	.video_block { // {{{1
+		display: block;
+		width: 100%;
+		background: @plugColor;
+		.relative;
+
+		a.play {
+			@s: 173px;
+			.linkNoLine;
+			display: block;
+			.size(@s);
+			.border-radius(@s/2);
+			background: rgba(33, 36, 37, 0.72);
+			.absolute(50%, auto, auto, 50%);
+			margin-left: -(@s/2);
+			margin-top: -(@s/2);
+			.transit(~'background-color');
+
+			&>span {
+				display: block;
+				.fontMetrics(0, 0);
+				.size(0);
+				overflow: hidden;
+				border: 20px solid transparent;
+				border-left-color: white;
+				border-left-width: 35px;
+				.absolute(50%, auto, auto, 50%);
+				margin-left: -15px;
+				margin-top: -20px;
+			}
+
+			&:hover {
+				background: fade(@activeLinkColor, 72%);
+			}
+		}
+
+		video {
+			display: block;
+			width: 100%;
+		}
+	} // .video_block }}}1
+
+	* + .video_block { margin-top: 108px; }
+} // section.pit
