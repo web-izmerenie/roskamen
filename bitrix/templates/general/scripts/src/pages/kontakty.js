@@ -44,6 +44,7 @@ stylesReady(function () {
 							var map = new ymaps.Map(id, {
 								center: [ y, x ],
 								zoom: parseInt($map.attr('data-zoom'), 10),
+								type: 'yandex#publicMapHybrid',
 							});
 
 							map.controls
