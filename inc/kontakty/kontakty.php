@@ -28,13 +28,13 @@
 				)
 			);?>
 		</div>
-		<?$APPLICATION->IncludeFile(
-			'/inc/kontakty/contact-email.php',
-			array(),
-			array(
-				'SHOW_BORDER' => true,
-				'MODE' => 'php',
-			)
-		);?>
 	</div><!-- .two-columns -->
+	<?$APPLICATION->IncludeFile(
+		'/inc/kontakty/contact-email.php',
+		array(),
+		array(
+			'SHOW_BORDER' => true,
+			'MODE' => 'php',
+		)
+	);?>
 </section>

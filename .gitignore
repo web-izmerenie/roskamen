@@ -15,10 +15,10 @@
 node_modules
 gulp
 
-bitrix/templates/main/styles/build
-bitrix/templates/main/scripts/build
-bitrix/templates/main/images/sprites/*/build
-bitrix/templates/main/styles/src/sprites
+bitrix/templates/general/styles/build
+bitrix/templates/general/scripts/build
+bitrix/templates/general/images/sprites/*/build
+bitrix/templates/general/styles/src/sprites
 
 .source_of_symbolic_links
 
