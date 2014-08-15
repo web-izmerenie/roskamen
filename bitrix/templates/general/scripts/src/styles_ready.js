@@ -12,7 +12,7 @@ define(['get_val', 'jquery'], function (getVal, $) {
 	return function (cb) {
 		$(function domReady() {
 			var $f = $('footer');
-			if ($f.size() <= 0) throw new Error('Tag <footer> not found.');
+			if ($f.size() <= 0) throw new Error('Tag <footer> not found!');
 			function loop() {
 				if ($f.height() !== getVal('footerHeight')) {
 					setTimeout(loop, getVal('waiterTimeout'));

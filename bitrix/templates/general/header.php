@@ -81,8 +81,8 @@
 <body>
 	<div id="bitrix-panel"><?$APPLICATION->ShowPanel()?></div>
 	<div class="top-part">
-		<header>
-			<div class="site-name">
+		<header itemscope itemtype="http://schema.org/LocalBusiness">
+			<div class="site-name" itemprop="name">
 				<?if(!defined('MAIN_PAGE')):?>
 				<a href="/" title="<?=$MESS['GOTO_MAIN_PAGE']?>">
 				<?endif?>
@@ -91,7 +91,19 @@
 				</a>
 				<?endif?>
 			</div>
-			<a href="tel:+79034892159" class="phone">+7 903 489-21-59</a>
+			<div class="schema-data">
+				<div itemprop="description">
+					Крупный производитель и поставщик щебня
+					в Ростове-на-Дону и области.
+				</div>
+				<address itemprop="address">
+					<b>Ростовская область</b><br>
+					Родионово-Несветайский район<br>
+					Барило-Крепинская слобода<br>
+					Месторождение Бунакское, 1
+				</address>
+			</div>
+			<a href="tel:+79034892159" class="phone" itemprop="telephone">+7 903 489-21-59</a>
 			<nav class="top_menu">
 				<?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
 	"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
