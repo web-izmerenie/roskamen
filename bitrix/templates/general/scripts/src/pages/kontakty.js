@@ -11,6 +11,8 @@ if ($s.size() <= 0) return;
 
 var imapResizeBindSuffix = '.interactive_map_resize';
 var $w = $(window);
+var $header = $('header');
+var $page = $('html,body');
 var imapRatio = getVal('kontaktyMapRatio');
 
 stylesReady(function () {
@@ -19,7 +21,9 @@ stylesReady(function () {
 		var $s = $(this);
 		var $imap = $s.find('.imap'); // interactive map
 		var $maps = $imap.find('.map');
+		var $onMap = $s.find('dl dd address a.on_map');
 
+		// map logic {{{1
 		$maps.each(function (i2) {
 			var $map = $(this);
 			var id = 'interactive_yandex_map_n_'+ i1 +'_'+ i2;
@@ -64,6 +68,7 @@ stylesReady(function () {
 				); // dynamicLoadApi()
 			}); // require(['dynamic_api']...
 		}); // $maps.each
+		// map logic }}}1
 
 		// resize map {{{1
 		$w.on(
@@ -81,6 +86,24 @@ stylesReady(function () {
 			}, 1)
 		).trigger('resize' + imapResizeBindSuffix);
 		// resize map }}}1
+
+		// scroll by link {{{1
+		$onMap.each(function () {
+			var $l = $(this);
+
+			var hash = $l.attr('href').split('#');
+			if (hash.length < 2) return;
+			hash = hash[1];
+			if ($imap.attr('id') !== hash) return;
+
+			$l.on('click', function () {
+				$page.stop().animate({
+					scrollTop: $imap.offset().top - 20 - $header.height()
+				}, getVal('animationSpeed') * 2, getVal('animationCurve'));
+				return false;
+			});
+		});
+		// scroll by link }}}1
 	}); // $s.each
 
 }); // stylesReady()
