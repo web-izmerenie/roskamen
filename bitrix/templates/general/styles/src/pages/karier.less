@@ -63,5 +63,25 @@ html body main section.pit {
 		}
 	} // .video_block }}}1
 
-	* + .video_block { margin-top: 108px; }
+	.info_block {
+		display: block;
+		.relative;
+
+		figure {
+			display: block;
+			.relative;
+
+			&>* { .size(100%, auto); }
+
+			figcaption {
+				display: block;
+				.size(625px, auto);
+				margin: 0 auto;
+				text-align: center;
+				padding-top: 31px - 17px;
+			}
+		}
+	}
+
+	* + .info_block { margin-top: 108px; }
 } // section.pit
