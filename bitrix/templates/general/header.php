@@ -97,10 +97,11 @@
 					в Ростове-на-Дону и области.
 				</div>
 				<address itemprop="address">
-					<b>Ростовская область</b><br>
-					Родионово-Несветайский район<br>
-					Барило-Крепинская слобода<br>
-					Месторождение Бунакское, 1
+					<?$APPLICATION->IncludeFile(
+						'/inc/address.php',
+						array(),
+						array('SHOW_BORDER' => false)
+					);?>
 				</address>
 			</div>
 			<a href="tel:+79034892159" class="phone" itemprop="telephone">+7 903 489-21-59</a>
