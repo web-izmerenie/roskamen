@@ -10,7 +10,12 @@ var $s = $('section.contacts');
 if ($s.size() <= 0) return;
 stylesReady(function () {
 
-	//
+	$s.each(function () {
+		var $s = $(this);
+		var $imap = $s.find('.imap');
+
+		//
+	});
 
 }); // stylesReady()
 }); // domReady()

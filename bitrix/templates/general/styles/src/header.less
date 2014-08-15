@@ -22,7 +22,8 @@ html body header {
 		vertical-align: top;
 
 		a { .linkNoLine; }
-		&, a, a:hover { color: @contentColor; }
+		&, a { color: @contentColor; }
+		a:hover { color: @activeLinkColor; }
 	} // .site_name }}}1
 
 	.phone { // {{{1
@@ -32,6 +33,7 @@ html body header {
 		vertical-align: top;
 		.relative(55px - 16px);
 		margin-left: @mainMargin;
+		cursor: default;
 
 		&, &:hover { color: @lightColor; }
 	} // .site-name + .phone }}}1

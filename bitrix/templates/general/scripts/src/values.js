@@ -15,6 +15,8 @@ define(function () {
 		footerHeight: 100, // px
 		waiterTimeout: 200, // ms
 
+		kontaktyMapRatio: [980, 450], // ratio a:b
+
 	};
 
 	exports.values.mainMargin = 38; // px
