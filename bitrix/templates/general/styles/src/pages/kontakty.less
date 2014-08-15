@@ -14,6 +14,69 @@ html body main section.contacts {
 		display: block;
 		.size(100%, 450px);
 		background: @plugColor;
+		.relative;
+		overflow: hidden;
+		z-index: -1;
+
+		.map {
+			display: block;
+			.size(100%);
+			z-index: 0;
+		}
+
+		.marker { // {{{2
+			@w: 254px;
+			@borderColor: #acd1d1;
+
+			display: block;
+			width: @w;
+			z-index: 1;
+			.absolute(50%, auto, auto, 50%);
+			background: white;
+			color: @contentColor;
+			padding: 0 20px;
+			padding-bottom: 24px - 7px;
+			margin-left: -(@w/2);
+			margin-top: -150px;
+			border: 3px solid @borderColor;
+			.box-sizing(border-box);
+			.border-radius(10px);
+
+			&:before, &:after {
+				.pseudoBlock;
+				.absolute(100%, auto, auto, 50%);
+				.size(0);
+				@s: 20px;
+				border: @s solid transparent;
+				border-top-color: white;
+				margin-left: -@s;
+			}
+
+			&:before {
+				@s: 24px;
+				border-width: @s;
+				border-top-color: @borderColor;
+				margin-left: -@s;
+			}
+
+			h3 {
+				.sansSerifFont('Cuprum', 20px);
+				font-weight: bold;
+				text-transform: uppercase;
+				padding-top: 33px - 17px;
+			}
+
+			address {
+				display: block;
+				.sansSerifFont('Cuprum', 16px, 24px);
+				padding-top: 33px - 22px;
+
+				b {
+					.sansSerifFont('Cuprum', 18px);
+					font-weight: bold;
+				}
+			}
+		} // .marker }}}2
 	} // .imap }}}1
 
 	@w: 620px;
@@ -27,6 +90,8 @@ html body main section.contacts {
 		display: block;
 		.fontMetrics(0, 0);
 		padding-top: 97px - 17px;
+		.relative;
+		z-index: -1;
 
 		.col {
 			display: inline-block;
