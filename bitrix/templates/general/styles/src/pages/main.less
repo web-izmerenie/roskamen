@@ -5,4 +5,79 @@
  */
 
 html.main_page body {
-}
+	.top-part {
+		background: #dadada url('/upload/main_page/poster.jpg') center center no-repeat;
+		.background-size(cover);
+		min-width: @minWidth;
+	}
+
+	header {
+		background: none;
+		.absolute(0, auto, auto, 0);
+	}
+
+	ul.slides { display: none; }
+
+	.slide {
+		@s: 480px;
+		display: block;
+		background: white;
+		border: 11px solid @plugColor;
+		.box-sizing(border-box);
+		.size(@s);
+		margin: 0 auto;
+		.border-radius(@s / 2);
+		.relative;
+		.transition(border-color @animationSpeed*8 @animationCurve);
+		overflow: hidden;
+
+		a.next {
+			display: block;
+			.size(25px, 14px);
+			margin-left: -(25px/2);
+
+			&:before, &:after {
+				.pseudoBlock;
+				.size(100%);
+				.bg('v.png', center center no-repeat);
+				.opacity(1);
+				.transit(~'opacity');
+				.background-size(contain);
+			}
+
+			&:after { .bgImg('v_active.png'); .opacity(0); }
+
+			.animatedIcon;
+
+			.absolute(auto, auto, 32px, 50%);
+			z-index: 10;
+		} // a.next
+
+		.bg {
+			display: block;
+			.absolute(0, auto, auto, 0);
+			.size(100%);
+			* { .size(100%); }
+			z-index: 0;
+		}
+
+		.text {
+			display: table;
+			.size(100%, 28px * 2);
+			.sansSerifFont('Cuprum', 25px, 28px);
+			text-transform: uppercase;
+			z-index: 5;
+			.absolute(auto, auto, 71px, 0);
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+
+			.inside {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				white-space: nowrap;
+			}
+		} // .text.
+	} // .slide
+} // html.main_page body

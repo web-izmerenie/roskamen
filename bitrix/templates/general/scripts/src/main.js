@@ -49,7 +49,7 @@ define(['basics/get_val'], function (getVal) {
 		$(function domReady() {
 			var $html = $('html');
 
-			//if ($html.hasClass('main_page')) require(['pages/main']);
+			if ($html.hasClass('main_page')) require(['pages/main']);
 			if ($('section.contacts').size() > 0) require(['pages/kontakty']);
 			if ($('section.pit').size() > 0) require(['pages/karier']);
 

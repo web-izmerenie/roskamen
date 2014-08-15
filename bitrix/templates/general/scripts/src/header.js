@@ -19,6 +19,8 @@ $(function domReady() {
 	var $phone = $h.find('.phone');
 	var $menu = $h.find('nav.top_menu > *');
 
+	var mainPage = $('html').hasClass('main_page');
+
 	var scrollOffsetBindSuffix = '.header_fixed_scroll_position';
 	var resizeBindSuffix = '.resize_header_relative';
 
@@ -30,9 +32,10 @@ $(function domReady() {
 	stylesReady(function () {
 
 		// scroll for fixed position {{{1
-		$w.on('scroll' + scrollOffsetBindSuffix, function () {
-			$h.css('left', (-$d.scrollLeft()) + 'px');
-		}).trigger('scroll' + scrollOffsetBindSuffix);
+		if (!mainPage)
+			$w.on('scroll' + scrollOffsetBindSuffix, function () {
+				$h.css('left', (-$d.scrollLeft()) + 'px');
+			}).trigger('scroll' + scrollOffsetBindSuffix);
 		// scroll for fixed position }}}1
 
 		$w.on('resize' + resizeBindSuffix, function () {
