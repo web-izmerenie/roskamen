@@ -60,6 +60,10 @@ stylesReady(function () {
 							map.events.add('mousedown', handler);
 							map.events.add('mouseup', handler);
 							map.events.add('mousemove', handler);
+							map.events.add('mousestart', handler);
+							map.events.add('mouseleave', handler);
+							map.events.add('touchstart', handler);
+							map.events.add('touchleave', handler);
 
 							$map.data('map', map);
 							$w.trigger('resize' + imapResizeBindSuffix);
