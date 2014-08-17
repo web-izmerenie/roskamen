@@ -108,6 +108,7 @@ stylesReady(function () {
 			'width': '',
 			'height': '',
 			'bottom': '',
+			'margin-left': '',
 		});
 		$text.css({
 			'font-size': '',
@@ -137,6 +138,7 @@ stylesReady(function () {
 			'width': r(nextSizeWR[0], nextSizeWR[1]) + 'px',
 			'height': r(nextSizeHR[0], nextSizeHR[1]) + 'px',
 			'bottom': r(nextBotR[0], nextBotR[1]) + 'px',
+			'margin-left': -(r(nextSizeWR[0], nextSizeWR[1]) / 2) + 'px',
 		});
 		$text.css({
 			'font-size': r(textFSR[0], textFSR[1]) + 'px',
