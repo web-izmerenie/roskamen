@@ -14,9 +14,9 @@ $APPLICATION->SetTitle("Карьер");
 			<div class="video_block">
 				<a class="play"><span>Воспроизвести</span></a>
 				<video poster="/upload/karier/video_poster.jpg">
-					<source src="/upload/main_page/movie.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
-					<source src="/upload/main_page/movie.webm" type='video/webm; codecs="vp8.0, vorbis"'>
-					<source src="/upload/main_page/movie.ogg" type='video/ogg; codecs="theora, vorbis"'>
+					<source src="/upload/karier/video/video.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+					<source src="/upload/karier/video/video.webm" type='video/webm; codecs="vp8.0, vorbis"'>
+					<source src="/upload/karier/video/video.ogg" type='video/ogg; codecs="theora, vorbis"'>
 					<p>Обновите ваш браузер чтобы просмотреть видео.</p>
 				</video>
 			</div>
