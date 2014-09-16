@@ -1,23 +1,53 @@
 {
-	"dependencies": {
-		"gulp": "*",
-		"gulp-clean": "*",
-		"gulp.spritesmith": "*",
-		"gulp-task-listing": "*"
-	},
-	"scripts": {
-		"postinstall": "bash ./deploy.sh"
-	},
+  "dependencies": {
+    "yargs": "*",
+    "merge-stream": "*",
+    "gulp": "*",
+    "gulp-clean": "*",
+    "gulp.spritesmith": "*",
+    "gulp-task-listing": "*",
+    "gulp-less": "*",
+    "gulp-if": "*",
+    "gulp-rename": "*",
+    "gulp-browserify": "*",
+    "gulp-uglify": "*",
+    "gulp-jshint": "*",
+    "jshint-stylish": "*",
+    "liveify": "*",
+    "gulp-livescript": "*",
+    "LiveScript": "*"
+  },
+  "scripts": {
+    "postinstall": "bash ./deploy.sh"
+  },
 
-	"gulp": {
-		"clean": [ "./bitrix/templates/general/styles/src/sprites/" ],
-		"sprites": {
-			"icons": {
-				"css_dir": "./bitrix/templates/general/styles/src/sprites/",
-				"img_dir": "./bitrix/templates/general/images/sprites/icons/",
-				"img_path_prefix": "/bitrix/templates/general/images/sprites/icons/",
-				"algorithm": "binary-tree"
-			}
-		}
-	}
+  "gulp": {
+    "distclean": [
+      "./gulp",
+      "./node_modules"
+    ],
+    "sprites": {
+      "icons": {
+        "cssName": "icons.less",
+        "cssDir": "./bitrix/templates/general/styles/src/sprites/",
+        "imgDir": "./bitrix/templates/general/images/sprites/icons/",
+        "imgPathPrefix": "/bitrix/templates/general/images/sprites/icons/",
+        "algorithm": "binary-tree"
+      }
+    },
+    "styles": {
+      "main": {
+        "type": "less",
+        "buildDeps": ["sprite-icons"],
+        "path": "./bitrix/templates/general/styles/",
+        "mainSrc": "main.less",
+        "buildFile": "build.css",
+        "subTasks": {
+          "fast": {
+            "buildDeps": []
+          }
+        }
+      }
+    }
+  }
 }
