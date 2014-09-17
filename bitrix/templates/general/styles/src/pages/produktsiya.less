@@ -68,3 +68,51 @@ html body main section.production {
 		}
 	}
 }
+
+html body > ul.advantages.production {
+	.resetList;
+	display: block;
+	.fixed(96px, 0, auto, 0);
+	z-index: 60;
+	text-align: center;
+	min-width: @minWidth;
+	padding-left: @mainMargin;
+	overflow: hidden;
+	.transit(~'opacity, height');
+	.opacity(0);
+	height: 0;
+	white-space: nowrap;
+
+	& > li {
+		.resetList;
+		display: inline-block;
+		.size(auto, 73px);
+		vertical-align: middle;
+		white-space: nowrap;
+
+		p {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: left;
+			.sansSerifFont('Cuprum', 16px, 20px);
+			padding-left: 15px;
+			width: 140px;
+			white-space: normal;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			.size(73px);
+			white-space: nowrap;
+		}
+	}
+}
+
+html.advantages_production body {
+	header { height: 208px !important; }
+	& > ul.advantages.production {
+		height: 73px;
+		.opacity(1);
+	}
+}
