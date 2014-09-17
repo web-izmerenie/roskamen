@@ -36,6 +36,7 @@ define(['basics/get_val'], function (getVal) {
 			if ($html.hasClass('main_page')) require(['pages/main']);
 			if ($('section.contacts').size() > 0) require(['pages/kontakty']);
 			if ($('section.pit').size() > 0) require(['pages/karier']);
+			if ($('section.production').size() > 0) require(['pages/produktsiya']);
 
 			require(['header']);
 		}); // domReady()

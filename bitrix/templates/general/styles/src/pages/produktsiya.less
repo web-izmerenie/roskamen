@@ -1,0 +1,70 @@
+/**
+ * "produktsiya" page styles
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+html body main section.production {
+	display: block;
+	min-width: @minWidth;
+	max-width: @maxWidth;
+	margin: 0 auto;
+	.relative;
+	.fontMetrics(0, 0);
+	overflow: hidden;
+
+	ul.advantages {
+		.resetList;
+		display: block;
+		text-align: center;
+		padding-top: 2px;
+		white-space: nowrap;
+
+		& > li {
+			.resetList;
+			display: inline-block;
+			text-align: center;
+			@w: 145px;
+			//margin-left: 82px; // 160px
+			.size(@w + (82px), auto);
+
+			&:first-child { margin-left: 0; }
+
+			p {
+				padding-top: 30px - 16px;
+				.sansSerifFont('Cuprum', 17px, 20px);
+			}
+		}
+	}
+
+	ul.production_list {
+		.resetList;
+		display: block;
+		text-align: center;
+		padding-top: 200px;
+
+		& > li {
+			.resetList;
+			display: block;
+			text-align: center;
+
+			img {
+				display: block;
+				.size(820px, auto);
+				margin: 0 auto;
+			}
+
+			h3 {
+				display: block;
+				.sansSerifFont('Cuprum', 30px);
+				font-weight: bold;
+				text-transform: uppercase;
+				padding-top: 90px - 44px;
+			}
+
+			& + li {
+				padding-top: 165px - 30px;
+			}
+		}
+	}
+}
