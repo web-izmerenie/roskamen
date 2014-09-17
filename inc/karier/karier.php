@@ -95,32 +95,6 @@
 		),
 		false
 	);?>
-	<!--<ul class="advantages">
-		<li>
-			<img alt="" src="/upload/karier/circles/way.png">
-			<p>Карьер расположен на 68 км<br>от Ростова-на-Дону</p>
-		</li>
-		<li>
-			<img alt="" src="/upload/karier/circles/time.png">
-			<p>Отгрузка щебня — 24 часа 7 дней<br> в неделю</p>
-		</li>
-		<li>
-			<img alt="" src="/upload/karier/circles/pyramid.png">
-			<p>Лещадность 8–10%</p>
-		</li>
-		<li>
-			<img alt="" src="/upload/karier/circles/car.png">
-			<p>Парк разногрузной техники<br>и возможность самовывоза</p>
-		</li>
-		<li>
-			<img alt="" src="/upload/karier/circles/weight.png">
-			<p>Отгрузим точно<br>от 10 до 100 тонн продукции</p>
-		</li>
-		<li>
-			<img alt="" src="/upload/karier/circles/percent.png">
-			<p>Гибкая система скидок<br>и доступные цены</p>
-		</li>
-	</ul>-->
 
 	<div class="info_block specific">
 		<figure>
