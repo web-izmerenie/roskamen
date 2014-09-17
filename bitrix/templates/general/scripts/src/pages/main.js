@@ -55,32 +55,34 @@ stylesReady(function () {
 		return false;
 	} // slideGo() }}}1
 
+	var slideSpeed = getVal('animationSpeed') * 4;
+	var slideCurve = getVal('animationCurve');
+
 	function applySlide($target) { // {{{1
 		$slide.css('border-color', $target.attr('data-color'));
 		$text.animate(
 			{ 'opacity': '0' },
-			getVal('animationSpeed'),
-			getVal('animationCurve'),
+			slideSpeed,
+			slideCurve,
 			function () {
 				$tInside.html( $target.find('h3').html() );
 				$text.animate(
 					{ 'opacity': '1' },
-					getVal('animationSpeed') * 4,
-					getVal('animationCurve')
+					slideSpeed,
+					slideCurve
 				);
 			}
 		);
 		$bg.animate(
-			{ 'margin-top': '100%' },
-			getVal('animationSpeed'),
-			getVal('animationCurve'),
+			{ 'opacity': '0' },
+			slideSpeed,
+			slideCurve,
 			function () {
-				$bg.css('margin-top', '-100%');
 				$bg.html('<img alt="" src="'+ $target.find('img').attr('src') +'">');
 				$bg.animate(
-					{ 'margin-top': '0' },
-					getVal('animationSpeed') * 4,
-					getVal('animationCurve'),
+					{ 'opacity': '1' },
+					slideSpeed,
+					slideCurve,
 					function () {
 						setTimeout(function () {
 							animate = false;
