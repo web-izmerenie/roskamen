@@ -6,6 +6,12 @@ $arUrlRewrite = array(
 		"ID" => "",
 		"PATH" => "/produktsiya/detail.php",
 	),
+	array(
+		"CONDITION" => "#^/robots.txt(\\?|\$)#",
+		"RULE" => "",
+		"ID" => "",
+		"PATH" => "/robots.php",
+	),
 );
 
 ?>
