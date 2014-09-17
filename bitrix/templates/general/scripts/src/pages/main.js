@@ -174,14 +174,21 @@ stylesReady(function () {
 
 				var nw = ww;
 				var nh = Math.round(ww * sh / sw);
+				var ox = 0;
+				var oy = (nh - wh) / 2;
+
 				if (nh < wh) {
 					nh = wh;
 					nw = Math.round(wh * sw / sh);
+					ox = (nw - ww) / 2;
+					oy = 0;
 				}
 
 				$video.css({
 					width: nw + 'px',
 					height: nh + 'px',
+					'margin-left': (-ox) + 'px',
+					'margin-top': (-oy) + 'px',
 				});
 
 				$bgVideo.addClass('active');
