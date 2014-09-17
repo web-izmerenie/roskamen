@@ -1,6 +1,6 @@
 <?
 	// values
-	$revision = 5;
+	$revision = 6;
 	$debug = false;
 	$tplPath = SITE_TEMPLATE_PATH;
 
