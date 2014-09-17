@@ -59,6 +59,8 @@ html.main_page body {
 			.size(100%);
 			* { .size(100%); }
 			z-index: 0;
+
+			img { .border-radius(@s); }
 		}
 
 		.text {
@@ -85,7 +87,6 @@ html.main_page body {
 		display: block;
 		.fixedStretch(0);
 		.size(100%);
-		background: purple;
 		.opacity(0);
 		.transit(~'opacity');
 		overflow: hidden;
