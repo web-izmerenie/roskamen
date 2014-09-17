@@ -153,6 +153,44 @@ stylesReady(function () {
 		}
 	}).trigger('resize' + bindSuffix); // }}}1
 
+	// bg video {{{1
+	$('.bg_video').each(function () {
+		var $bgVideo = $(this);
+		var $video = $bgVideo.find('video');
+
+		var waitForVideo = $.proxy(setTimeout, null, function () {
+			if ($video.width() < 10 || $video.height() < 10) {
+				waitForVideo();
+				return;
+			}
+
+			var bindSuffix = '.main_page_bg_video';
+			var sw = $video.width();
+			var sh = $video.height();
+
+			$w.on('resize' + bindSuffix, function () {
+				var ww = $w.width();
+				var wh = $w.height();
+
+				var nw = ww;
+				var nh = Math.round(ww * sh / sw);
+				if (nh < wh) {
+					nh = wh;
+					nw = Math.round(wh * sw / sh);
+				}
+
+				$video.css({
+					width: nw + 'px',
+					height: nh + 'px',
+				});
+
+				$bgVideo.addClass('active');
+			}).trigger('resize' + bindSuffix);
+		}, getVal('waiterTimeout'));
+		waitForVideo();
+	});
+	// bg video }}}1
+
 }); // stylesReady()
 }); // domReady()
 }); // define()

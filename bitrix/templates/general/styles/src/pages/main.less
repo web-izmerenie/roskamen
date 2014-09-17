@@ -80,4 +80,23 @@ html.main_page body {
 			}
 		} // .text.
 	} // .slide
+
+	.bg_video {
+		display: block;
+		.fixedStretch(0);
+		.size(100%);
+		background: purple;
+		.opacity(0);
+		.transit(~'opacity');
+		overflow: hidden;
+
+		&.active { .opacity(1); }
+
+		video {
+			display: block;
+			.relative;
+			.size(auto);
+			margin: 0 auto;
+		}
+	}
 } // html.main_page body

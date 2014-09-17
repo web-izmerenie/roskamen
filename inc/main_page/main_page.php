@@ -1,10 +1,10 @@
-<!--<div class="bg_video">
+<div class="bg_video">
 	<video autoplay>
 		<source src="/upload/main_page/movie.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
 		<source src="/upload/main_page/movie.webm" type='video/webm; codecs="vp8.0, vorbis"'>
 		<source src="/upload/main_page/movie.ogg" type='video/ogg; codecs="theora, vorbis"'>
 	</video>
-</div>-->
+</div>
 
 <div class="slide">
 	<div class="bg"></div>
