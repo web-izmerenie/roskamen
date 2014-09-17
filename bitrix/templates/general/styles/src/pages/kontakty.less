@@ -170,4 +170,76 @@ html body main section.contacts {
 		.size(@w, auto);
 		margin: 0 auto;
 	}
+
+	a.popup-map {
+		.interactiveLink;
+	}
 } // section.contacts
+
+// popup map {{{1
+
+html.popup-map,
+html.popup-map body {
+	overflow-x: none !important;
+	overflow-y: none !important;
+	overflow: none !important;
+}
+
+html.popup-map body {
+	& > .popup-map {
+		.opacity(0);
+
+		&, & > .overflow {
+			display: block;
+			.fixed(0, 0, 0, 0);
+			.size(100%);
+			z-index: 10000;
+		}
+
+		& > .overflow {
+			.relative;
+			background: black;
+			z-index: 10010;
+			.opacity(0.8);
+		}
+
+		& > .content {
+			.relative;
+			display: block;
+			z-index: 10020;
+			background: black;
+			.fixed(@mainMargin, @mainMargin, @mainMargin, @mainMargin);
+
+			& > .map {
+				display: block;
+				.relative;
+				.size(100%);
+				z-index: 10050;
+			}
+
+			& > .closer {
+				.linkNoLine;
+				@s: 60px;
+				.size(@s);
+				.border-radius(@s / 2);
+				background: rgba(33, 36, 37, 0.72);
+				.transit(~'background-color');
+				.absolute(15px, 15px);
+				z-index: 10080;
+				cursor: pointer;
+
+				&:before {
+					.sprite(@sprite-icons-little_closer);
+					.pseudoBlock;
+					@left: (@s - @sprite-icons-little_closer-width) / 2;
+					@top: (@s - @sprite-icons-little_closer-height) / 2;
+					.absolute(@top, auto, auto, @left);
+				}
+
+				&:hover { background: fade(@activeLinkColor, 72%); }
+			}
+		}
+	}
+}
+
+// popup map }}}1
