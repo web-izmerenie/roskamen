@@ -4,7 +4,7 @@
  * @author Viacheslav Lotsmanov
  */
 
-html body main section.production {
+html body main section.production { // production {{{1
 	display: block;
 	min-width: @minWidth;
 	max-width: @maxWidth;
@@ -60,6 +60,12 @@ html body main section.production {
 				font-weight: bold;
 				text-transform: uppercase;
 				padding-top: 90px - 44px;
+
+				a {
+					.linkNoLine;
+					color: @contentColor;
+					&:hover { color: @activeLinkColor; }
+				}
 			}
 
 			& + li {
@@ -67,8 +73,9 @@ html body main section.production {
 			}
 		}
 	}
-}
+} // production }}}1
 
+// fixed advantages (under header) {{{1
 html body > ul.advantages.production {
 	.resetList;
 	display: block;
@@ -108,6 +115,7 @@ html body > ul.advantages.production {
 		}
 	}
 }
+// fixed advantages (under header) }}}1
 
 html.advantages_production body {
 	header { height: 208px !important; }
@@ -116,3 +124,97 @@ html.advantages_production body {
 		.opacity(1);
 	}
 }
+
+@import "../blockquote";
+
+// detail page {{{1
+html body main section.production_detail {
+	display: block;
+	min-width: @minWidth;
+	max-width: @maxWidth;
+	margin: 0 auto;
+	.fontMetrics(0, 0);
+
+	img.picture {
+		display: block;
+		.size(820px, auto);
+		margin: 0 auto;
+		margin-bottom: 80px;
+	}
+
+	.keyval {
+		display: block;
+		.size(760px, auto);
+		margin: 0 auto;
+		padding-left: 40px;
+		padding-bottom: 100px;
+
+		dl {
+			display: inline-block;
+			white-space: nowrap;
+
+			dt, dd {
+				display: inline-block;
+				.sansSerifFont('Cuprum', 20px, 36px);
+				color: #75a2ae;
+			}
+			dt {
+				padding-right: 5px;
+			}
+			dd {
+				color: @contentColor;
+				padding-right: 20px;
+			}
+		}
+	}
+
+	ul.advantages { // {{{2
+		&, & > li {
+			.resetList;
+			display: block;
+			vertical-align: top;
+			white-space: nowrap;
+		}
+
+		text-align: center;
+
+		& > li {
+			@s: 145px;
+
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+			.size(@s + 80px);
+
+			img {
+				display: block;
+				margin: 0 auto;
+				.size(@s);
+			}
+
+			p {
+				.sansSerifFont('Cuprum', 17px, 20px);
+				padding-top: 30px - 16px;
+				white-space: normal;
+			}
+		}
+	} // ul.advantages }}}2
+
+	// blockquote {{{2
+
+	blockquote {
+		.blockquoteMixin;
+
+		a.phone {
+			.linkNoLine;
+			&, &:hover {
+				color: @contentColor;
+			}
+		}
+	}
+
+	* + blockquote { margin-top: 108px - 31px; }
+
+	// blockquote }}}2
+}
+// detail page }}}1

@@ -1,0 +1,21 @@
+/**
+ * blockquote mixin
+ *
+ * @author Viacheslav Lotsmanov
+ */
+
+.blockquoteMixin() {
+	.sansSerifFont('Cuprum', 20px, 24px);
+	border-top: 5px solid @plugColor;
+	border-bottom: 5px solid @plugColor;
+	text-align: center;
+	.box-sizing(border-box);
+	padding: 0 @mainMargin;
+	padding-top: 80px - 18px;
+	padding-bottom: 70px - 6px;
+	margin: 0 @mainMargin;
+
+	&.yellow { border-color: @yellowColor; }
+	&.green { border-color: @greenColor; }
+	&.blue { border-color: @blueColor; }
+}

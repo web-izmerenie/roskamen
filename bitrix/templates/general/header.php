@@ -102,7 +102,11 @@
 					);?>
 				</address>
 			</div>
-			<a href="tel:+79034892159" class="phone" itemprop="telephone">+7 903 489-21-59</a>
+			<?$APPLICATION->IncludeFile(
+				'/inc/phone_link.php',
+				array(),
+				array('SHOW_BORDER' => false)
+			);?>
 			<nav class="top_menu">
 				<?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
 	"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня

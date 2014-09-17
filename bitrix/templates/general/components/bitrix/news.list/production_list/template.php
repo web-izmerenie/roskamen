@@ -8,7 +8,8 @@
 			?>" width="<?=$arItem["DETAIL_PICTURE"]["WIDTH"]
 			?>" height="<?=$arItem["DETAIL_PICTURE"]["HEIGHT"]
 			?>">
-		<h3><?=$arItem["~NAME"]?></h3>
+		<h3><a href="<?=$arItem["DETAIL_PAGE_URL"]
+			?>"><?=$arItem["~NAME"]?></a></h3>
 	</li>
 <?endforeach?>
 </ul>

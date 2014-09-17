@@ -4,27 +4,15 @@
  * @author Viacheslav Lotsmanov
  */
 
+@import "../blockquote";
+
 html body main section.pit {
 	display: block;
 	min-width: @minWidth;
 	max-width: @maxWidth;
 	margin: 0 auto;
 
-	blockquote { // {{{!
-		.sansSerifFont('Cuprum', 20px, 24px);
-		border-top: 5px solid @plugColor;
-		border-bottom: 5px solid @plugColor;
-		text-align: center;
-		.box-sizing(border-box);
-		padding: 0 @mainMargin;
-		padding-top: 80px - 18px;
-		padding-bottom: 70px - 6px;
-		margin: 0 @mainMargin;
-
-		&.yellow { border-color: @yellowColor; }
-		&.green { border-color: @greenColor; }
-		&.blue { border-color: @blueColor; }
-	} // blockquote }}}1
+	blockquote { .blockquoteMixin; }
 
 	.video_block { // {{{1
 		display: block;
