@@ -100,7 +100,9 @@
 		<figure>
 			<img alt="" src="/upload/karier/stones.jpg">
 			<figcaption>
-				<p>Высокое качество нашей продукции подтверждается <a href="#">сертификатами</a> и&nbsp;<a href="#">паспортами</a>.</p>
+				<p>Высокое качество нашей продукции подтверждается
+					<a href="/upload/documents/certificate.pdf" target="_blank">сертификатами</a>
+					и&nbsp;<a href="/upload/documents/passport.pdf" target="_blank">паспортами</a>.</p>
 				<p>Щебень, выработанный в&nbsp;нашем карьере, был допущен в&nbsp;составе основных поставок строительных материалов при возведении военного аэродрома в&nbsp;Крымске.</p>
 			</figcaption>
 		</figure>
