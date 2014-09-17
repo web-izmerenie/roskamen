@@ -1,7 +1,7 @@
 <?
 	// values
 	$revision = 5;
-	$debug = true;
+	$debug = false;
 	$tplPath = SITE_TEMPLATE_PATH;
 
 	IncludeTemplateLangFile(__FILE__);
@@ -66,7 +66,7 @@
 			urlArgs: 'v=<?=$revision?>',
 		});
 		require(['basics/get_val'], function (getVal) {
-			getVal.set('clientSide', <?=($debug)?'true':'false'?>);
+			getVal.set('clientSide', <?=($debug||1===1)?'true':'false'?>);
 			getVal.set('lang', '<?=LANGUAGE_ID?>');
 			getVal.set('revision', '<?=$revision?>');
 			getVal.set('tplPath', '<?=$tplPath?>');
