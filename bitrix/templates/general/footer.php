@@ -1,4 +1,8 @@
-		</main>
+		<?if(!defined('NO_CONTENT')):?>
+			</main>
+		<?else:?>
+			</div><!--.main_block-->
+		<?endif?>
 	</div><!-- .top-part -->
 	<footer>
 		<div class="developer">

@@ -16,6 +16,7 @@
 	$main_classes = array();
 
 	if (defined('MAIN_PAGE')) $html_classes[] = 'main_page';
+	if (defined('ERROR_404')) $html_classes[] = 'error_404';
 
 	$html_classes = implode(' ', $html_classes);
 	$main_classes = implode(' ', $main_classes);
@@ -121,7 +122,11 @@
 );?>
 			</nav>
 		</header>
-		<?if(!defined('MAIN_PAGE')):?>
+		<?if(!defined('MAIN_PAGE') && !defined('ERROR_404')):?>
 			<h1><?$APPLICATION->ShowTitle()?></h1>
 		<?endif?>
-		<main>
+		<?if(!defined('NO_CONTENT')):?>
+			<main>
+		<?else:?>
+			<div class="main_block">
+		<?endif?>

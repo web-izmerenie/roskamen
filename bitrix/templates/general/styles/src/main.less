@@ -38,6 +38,7 @@
 @import "pages/kontakty";
 @import "pages/karier";
 @import "pages/produktsiya";
+@import "pages/error_404";
 
 // imports }}}1
 
@@ -80,7 +81,7 @@ html body {
 		&:after { .pseudoBlock; }
 	} // .top-part
 
-	main { // {{{1
+	main, .main_block { // {{{1
 		display: block;
 		font: @contentFont;
 		.box-sizing(border-box);
