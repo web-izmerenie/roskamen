@@ -103,7 +103,7 @@
 		false
 	);?>
 
-	<blockquote class="blue">
+	<blockquote class="blue" itemscope itemtype="http://schema.org/ContactPoint">
 		<p>Узнать о стоимости продукции и заказать щебень вы можете,<br>
 		позвонив по круглосуточному телефону
 		<?$APPLICATION->IncludeFile(
