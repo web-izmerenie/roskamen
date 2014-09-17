@@ -36,7 +36,13 @@ define(['basics/get_val'], function (getVal) {
 			if ($html.hasClass('main_page')) require(['pages/main']);
 			if ($('section.contacts').size() > 0) require(['pages/kontakty']);
 			if ($('section.pit').size() > 0) require(['pages/karier']);
-			if ($('section.production').size() > 0) require(['pages/produktsiya']);
+
+			if (
+				$('section.production').size() > 0 ||
+				$('section.production_detail').size() > 0)
+			{
+				require(['pages/produktsiya']);
+			}
 			if ($html.hasClass('error_404')) require(['pages/error_404']);
 
 			require(['header']);

@@ -22,6 +22,11 @@ define(function () {
 
 		kontaktyMapRatio: [980, 450], // ratio a:b
 
+		blockquoteRatio: {
+			top: [(80 - 18), ((80 - 18) + (103 - 80))],
+			bottom: [(70 - 6), ((70 - 6) + (92 - 70))],
+		},
+
 	};
 
 	exports.values.mainMargin = 38; // px

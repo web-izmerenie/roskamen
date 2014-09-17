@@ -16,8 +16,8 @@ var $f = $('footer');
 var resizeBindSuffix = '.pit_relative_values';
 var rMin = getVal('minWidth');
 var rMax = getVal('maxWidth');
-var bqTR = [(80 - 18), ((80 - 18) + (103 - 80))];
-var bqBR = [(70 - 6), ((70 - 6) + (92 - 70))];
+var bqTR = getVal('blockquoteRatio').top;
+var bqBR = getVal('blockquoteRatio').bottom;
 
 stylesReady(function () {
 	$s.each(function (i1) {
