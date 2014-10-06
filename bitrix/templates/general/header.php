@@ -40,7 +40,7 @@
 		<script>throw new Error('IE less than 8');</script>
 	<![endif]-->
 
-	<!--<link href="/favicon.ico?v=<?=$revision?>" rel="shortcut icon" type="image/x-icon">-->
+	<link href="/favicon.ico?v=<?=$revision?>" rel="shortcut icon" type="image/x-icon">
 
 	<link rel="stylesheet" href="<?=$tplPath?>/styles/build/build.css?v=<?=$revision?>">
 	<script src="<?=$tplPath?>/scripts/src/libs/require.js?v=<?=$revision?>"></script>
