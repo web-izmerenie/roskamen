@@ -2,6 +2,8 @@
  * "kontakty" page behavior
  *
  * @author Viacheslav Lotsmanov
+ * @license GNU/AGPLv3
+ * @see {@link https://github.com/web-izmerenie/roskamen/blob/master/LICENSE-AGPLv3|License}
  */
 
 define(['jquery', 'styles_ready', 'get_val', 'get_local_text'],
